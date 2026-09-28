@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DATUMx — The grounded language model</title>
+  <meta name="description" content="DATUMx is a large language model built for precision: grounded answers, long context, and tool use you can audit." />
+  <meta name="theme-color" content="#0a0c10" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="logo" aria-label="DATUMx home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16h24M16 4v24" /><circle cx="16" cy="16" r="5" /></svg>
+        <span>DATUM<b>x</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#features">Model</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#developers">Developers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="#signup" class="btn btn--ghost">Sign in</a>
+        <a href="#signup" class="btn btn--primary">Get API key</a>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#features">Model</a>
+      <a href="#benchmarks">Benchmarks</a>
+      <a href="#developers">Developers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#signup" class="btn btn--primary">Get API key</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="dot"></span> DATUMx 2 is now generally available</p>
+          <h1>Every answer,<br /><span class="accent">anchored to a source.</span></h1>
+          <p class="lede">DATUMx is a large language model built for precision. It reasons over your data, cites what it uses, and says so when it doesn't know — so you can ship AI that people actually trust.</p>
+          <div class="hero__actions">
+            <a href="#signup" class="btn btn--primary btn--lg">Start building free</a>
+            <a href="#developers" class="btn btn--ghost btn--lg">Read the docs <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="hero__stats">
+            <div><dt>Context window</dt><dd>1M tokens</dd></div>
+            <div><dt>Median latency</dt><dd>&lt;300 ms</dd></div>
+            <div><dt>Languages</dt><dd>100+</dd></div>
+          </dl>
+        </div>
+
+        <div class="console" aria-label="Example DATUMx conversation">
+          <div class="console__bar">
+            <span></span><span></span><span></span>
+            <p>datumx-2 · grounded mode</p>
+          </div>
+          <div class="console__body" id="console">
+            <div class="msg msg--user">
+              <p>What was our Q3 churn rate, and what drove it?</p>
+            </div>
+            <div class="msg msg--ai">
+              <p class="msg__typed" data-text="Q3 churn was 3.1%, down from 3.8% in Q2 [1]. The biggest driver was annual-plan renewals in the SMB segment, which rose 22% after the onboarding redesign [2]. Enterprise churn was flat [1]."></p>
+              <ul class="cites" hidden>
+                <li><span>1</span> finance/q3-metrics.xlsx · Sheet “Retention”</li>
+                <li><span>2</span> product/onboarding-review.pdf · p. 4</li>
+              </ul>
+            </div>
+          </div>
+          <div class="console__input">
+            <span>Ask about your data…</span>
+            <kbd>⏎</kbd>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust" aria-label="Teams building with DATUMx">
+      <div class="wrap">
+        <p>Trusted by teams shipping AI in production</p>
+        <ul class="trust__logos">
+          <li>NORTHWIND</li><li>Helix&nbsp;Labs</li><li>quanta</li><li>ORBITAL</li><li>Meridian</li><li>fieldnote</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="kicker">01 — The model</p>
+          <h2>Built on a fixed point: accuracy first.</h2>
+          <p>A datum is the reference every measurement starts from. DATUMx is designed the same way — every capability is tuned around being right, then being fast.</p>
+        </header>
+
+        <div class="features">
+          <article class="card card--wide">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7" /><circle cx="18" cy="16" r="3" /><path d="m20.2 18.2 1.8 1.8" /></svg></div>
+            <h3>Grounded generation</h3>
+            <p>Connect documents, databases, and APIs. DATUMx retrieves, reasons, and returns inline citations down to the page and cell — with a calibrated confidence score on every claim.</p>
+            <div class="meter" aria-hidden="true">
+              <div><span>Claims with citations</span><b>98.7%</b></div>
+              <i style="--v: 98.7%"></i>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M8 4v16" /></svg></div>
+            <h3>1M-token context</h3>
+            <p>Load entire codebases, contract sets, or a year of support tickets in one request — with near-perfect recall across the whole window.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="m14.7 6.3 3 3L8 19H5v-3z" /><path d="m13 8 3 3" /></svg></div>
+            <h3>Reliable tool use</h3>
+            <p>Structured outputs that always match your JSON schema, parallel function calls, and agent loops that recover gracefully from errors.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" /><path d="m9 12 2 2 4-4" /></svg></div>
+            <h3>Private by default</h3>
+            <p>Your prompts and data are never used for training. SOC 2 Type II, HIPAA-eligible, and regional data residency in the US, EU, and APAC.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M13 3 4 14h7l-1 7 9-11h-7z" /></svg></div>
+            <h3>Three sizes, one API</h3>
+            <p><b>x-Lite</b> for high-volume tasks, <b>x-Core</b> for everyday work, and <b>x-Max</b> for the hardest reasoning. Switch with a single parameter.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENCHMARKS -->
+    <section class="section section--alt" id="benchmarks">
+      <div class="wrap bench">
+        <header class="section__head">
+          <p class="kicker">02 — Benchmarks</p>
+          <h2>Fewer hallucinations. Measurably.</h2>
+          <p>Results on our internal grounded-QA suite of 12,000 questions over enterprise documents. Lower hallucination rate is better.</p>
+          <p class="note">Figures are illustrative placeholders for this page.</p>
+        </header>
+
+        <figure class="chart" aria-label="Hallucination rate by model">
+          <figcaption>Hallucination rate on grounded QA</figcaption>
+          <div class="chart__row is-us"><span>DATUMx x-Max</span><div class="chart__bar"><i style="--v: 12%"></i></div><b>1.2%</b></div>
+          <div class="chart__row is-us"><span>DATUMx x-Core</span><div class="chart__bar"><i style="--v: 21%"></i></div><b>2.1%</b></div>
+          <div class="chart__row"><span>Leading model A</span><div class="chart__bar"><i style="--v: 48%"></i></div><b>4.8%</b></div>
+          <div class="chart__row"><span>Leading model B</span><div class="chart__bar"><i style="--v: 63%"></i></div><b>6.3%</b></div>
+          <div class="chart__row"><span>Open-weights baseline</span><div class="chart__bar"><i style="--v: 91%"></i></div><b>9.1%</b></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DEVELOPERS -->
+    <section class="section" id="developers">
+      <div class="wrap dev">
+        <div class="dev__copy">
+          <p class="kicker">03 — Developers</p>
+          <h2>From key to production in five lines.</h2>
+          <p>A clean REST API with official SDKs for Python, TypeScript, Go, and Java. Streaming, batching, and fine-tuning are built in — no extra services to stitch together.</p>
+          <ul class="checks">
+            <li>OpenAI-compatible endpoint for easy migration</li>
+            <li>Streaming responses with token-level citations</li>
+            <li>Batch API at 50% off for offline workloads</li>
+            <li>Usage dashboards, rate-limit headers, and audit logs</li>
+          </ul>
+        </div>
+
+        <div class="code">
+          <div class="code__tabs" role="tablist" aria-label="SDK language">
+            <button role="tab" aria-selected="true" data-tab="py">Python</button>
+            <button role="tab" aria-selected="false" data-tab="ts">TypeScript</button>
+            <button role="tab" aria-selected="false" data-tab="sh">cURL</button>
+            <button class="code__copy" aria-label="Copy code">Copy</button>
+          </div>
+<pre data-panel="py"><code><span class="k">from</span> datumx <span class="k">import</span> Datumx
+
+client = Datumx()
+
+answer = client.responses.create(
+    model=<span class="s">"datumx-2-core"</span>,
+    sources=[<span class="s">"s3://acme/finance/"</span>],
+    input=<span class="s">"What was our Q3 churn rate?"</span>,
+)
+<span class="f">print</span>(answer.text, answer.citations)</code></pre>
+<pre data-panel="ts" hidden><code><span class="k">import</span> Datumx <span class="k">from</span> <span class="s">"datumx"</span>;
+
+<span class="k">const</span> client = <span class="k">new</span> Datumx();
+
+<span class="k">const</span> answer = <span class="k">await</span> client.responses.create({
+  model: <span class="s">"datumx-2-core"</span>,
+  sources: [<span class="s">"s3://acme/finance/"</span>],
+  input: <span class="s">"What was our Q3 churn rate?"</span>,
+});
+console.<span class="f">log</span>(answer.text, answer.citations);</code></pre>
+<pre data-panel="sh" hidden><code>curl https://api.datumx.ai/v2/responses \
+  -H <span class="s">"Authorization: Bearer $DATUMX_API_KEY"</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "datumx-2-core",
+    "sources": ["s3://acme/finance/"],
+    "input": "What was our Q3 churn rate?"
+  }'</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--alt" id="pricing">
+      <div class="wrap">
+        <header class="section__head section__head--center">
+          <p class="kicker">04 — Pricing</p>
+          <h2>Pay per token. Scale without surprises.</h2>
+          <p>Prices per million tokens. Start with $10 in free credits — no card required.</p>
+        </header>
+
+        <div class="pricing">
+          <article class="plan">
+            <h3>x-Lite</h3>
+            <p class="plan__desc">Classification, extraction, and high-volume chat.</p>
+            <p class="plan__price"><b>$0.15</b> in · <b>$0.60</b> out</p>
+            <ul><li>256K context</li><li>Structured outputs</li><li>Batch API</li></ul>
+            <a href="#signup" class="btn btn--ghost">Start with Lite</a>
+          </article>
+          <article class="plan plan--featured">
+            <p class="plan__tag">Most popular</p>
+            <h3>x-Core</h3>
+            <p class="plan__desc">The balanced default for assistants and RAG.</p>
+            <p class="plan__price"><b>$2.50</b> in · <b>$10</b> out</p>
+            <ul><li>1M context</li><li>Grounded mode with citations</li><li>Tool use &amp; agents</li><li>Fine-tuning</li></ul>
+            <a href="#signup" class="btn btn--primary">Start with Core</a>
+          </article>
+          <article class="plan">
+            <h3>x-Max</h3>
+            <p class="plan__desc">Deep reasoning for research, code, and analysis.</p>
+            <p class="plan__price"><b>$12</b> in · <b>$48</b> out</p>
+            <ul><li>1M context</li><li>Extended reasoning</li><li>Priority throughput</li></ul>
+            <a href="#signup" class="btn btn--ghost">Start with Max</a>
+          </article>
+        </div>
+        <p class="pricing__enterprise">Need dedicated capacity, VPC deployment, or custom terms? <a href="#signup">Talk to sales →</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <header class="section__head">
+          <p class="kicker">05 — FAQ</p>
+          <h2>Questions, answered.</h2>
+        </header>
+        <div class="faq__list">
+          <details>
+            <summary>What makes DATUMx different from other LLMs?</summary>
+            <p>DATUMx is trained and evaluated around grounding. In grounded mode every factual claim is tied to a source you provided, and the model abstains rather than guessing when the evidence isn't there.</p>
+          </details>
+          <details>
+            <summary>Do you train on my data?</summary>
+            <p>No. API inputs and outputs are never used to train our models. Data is retained for 30 days for abuse monitoring by default, and zero-retention is available on enterprise plans.</p>
+          </details>
+          <details>
+            <summary>Can I migrate from another provider?</summary>
+            <p>Yes. DATUMx exposes an OpenAI-compatible endpoint, so most apps switch by changing the base URL and model name. Our migration guide covers prompts, tools, and streaming.</p>
+          </details>
+          <details>
+            <summary>Which data sources can I connect?</summary>
+            <p>S3, GCS, Azure Blob, Postgres, Snowflake, BigQuery, Google Drive, SharePoint, Notion, and any HTTP API. Files are indexed automatically and kept in sync.</p>
+          </details>
+          <details>
+            <summary>Is there a free tier?</summary>
+            <p>Every new account gets $10 in credits with no card required, plus free access to x-Lite in the playground.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="signup">
+      <div class="wrap cta__inner">
+        <h2>Build on solid ground.</h2>
+        <p>Get an API key in under a minute and $10 in free credits.</p>
+        <form class="cta__form" novalidate>
+          <label class="sr-only" for="email">Work email</label>
+          <input id="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+          <button type="submit" class="btn btn--primary btn--lg">Get API key</button>
+        </form>
+        <p class="cta__msg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <a href="#top" class="logo">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16h24M16 4v24" /><circle cx="16" cy="16" r="5" /></svg>
+          <span>DATUM<b>x</b></span>
+        </a>
+        <p>The grounded language model.</p>
+      </div>
+      <nav aria-label="Footer">
+        <div><h4>Product</h4><a href="#features">Model</a><a href="#pricing">Pricing</a><a href="#benchmarks">Benchmarks</a></div>
+        <div><h4>Developers</h4><a href="#developers">Docs</a><a href="#developers">API reference</a><a href="#developers">Status</a></div>
+        <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Security</a></div>
+      </nav>
+    </div>
+    <div class="wrap footer__base">
+      <p>© <span id="year">2026</span> DATUMx. All rights reserved.</p>
+      <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
