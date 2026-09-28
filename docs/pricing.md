@@ -1,5 +1,5 @@
 ---
-description: Pay per token. Scale without surprises.
+description: "Pay per token. Scale without surprises."
 ---
 
 # Pricing

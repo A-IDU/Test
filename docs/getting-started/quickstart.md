@@ -1,5 +1,5 @@
 ---
-description: From key to production in five lines.
+description: "From key to production in five lines."
 ---
 
 # Quickstart

@@ -1,5 +1,5 @@
 ---
-description: The grounded language model. Every answer, anchored to a source.
+description: "The grounded language model. Every answer, anchored to a source."
 cover: .gitbook/assets/datumx-hero.png
 coverY: 0
 layout:

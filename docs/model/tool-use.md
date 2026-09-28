@@ -1,5 +1,5 @@
 ---
-description: Structured outputs, parallel function calls, and resilient agents.
+description: "Structured outputs, parallel function calls, and resilient agents."
 ---
 
 # Tool use

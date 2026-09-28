@@ -1,5 +1,5 @@
 ---
-description: Every factual claim tied to a source you provided.
+description: "Every factual claim tied to a source you provided."
 ---
 
 # Grounded generation

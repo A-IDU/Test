@@ -1,5 +1,5 @@
 ---
-description: Fewer hallucinations. Measurably.
+description: "Fewer hallucinations. Measurably."
 ---
 
 # Benchmarks

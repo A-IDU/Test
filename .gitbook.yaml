@@ -1,7 +1,0 @@
-# GitBook Git Sync configuration
-# https://gitbook.com/docs/getting-started/git-sync/content-configuration
-root: ./docs/
-
-structure:
-  readme: README.md
-  summary: SUMMARY.md

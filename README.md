@@ -19,21 +19,24 @@ python3 -m http.server 8000
 | `styles.css` | Design tokens, layout, and responsive breakpoints (980px, 640px) |
 | `script.js` | Typed demo response, scroll reveals, code tabs + copy, mobile menu, email form validation |
 | `assets/favicon.svg` | Logo mark |
-| `.gitbook.yaml` | GitBook Git Sync config — points GitBook at `docs/` |
-| `docs/` | GitBook space: `README.md` (home), `SUMMARY.md` (sidebar), and content pages |
+| `gitbook-docs.yaml` | GitBook site config: maps the **DATUMx Docs** space to `docs/` |
+| `docs/` | GitBook space: `README.md` (home), `SUMMARY.md` (sidebar), pages, and `.gitbook/assets/` |
 
 ## GitBook sync
 
-The `docs/` folder is a GitBook space built from the landing page content. GitBook only syncs Markdown, so the HTML page and the docs live side by side, and `.gitbook.yaml` keeps GitBook out of the repo root.
+`docs/` is a GitBook space built from the landing page content. GitBook syncs Markdown only, so the HTML page stays outside `docs/` and is not imported.
 
-To connect it:
+To connect it (site-wide Git Sync):
 
-1. In GitBook, create a space (or open an existing one).
-2. Open the space menu → **Configure** → **GitHub Sync**, and install/authorize the GitBook GitHub app for this repository.
-3. Select this repository and the branch to sync.
-4. For the initial sync direction, choose **GitHub → GitBook** so the pages in `docs/` are imported.
+1. In GitBook, open your site and choose **Git Sync** in the sidebar.
+2. Connect GitHub and install the GitBook app on this repository if prompted.
+3. Select repository `A-IDU/Test` and the branch to sync.
+4. Initial sync direction: **GitHub → GitBook**, because the repo is the source of truth.
+5. **Project directory:** leave blank. `gitbook-docs.yaml` lives at the repo root.
+6. **Content mapping:** map the space to `./docs`, matching `gitbook-docs.yaml`.
+7. Click **Sync**.
 
-After that, edits sync both ways: commits to `docs/` show up in GitBook, and edits in GitBook are committed back to the branch. To add a page, create a Markdown file under `docs/` and link it from `docs/SUMMARY.md`. Upload `docs/.gitbook/assets/datumx-logo.svg` as the space logo under **Customize**.
+After that, sync runs both ways. To add a page, create a Markdown file under `docs/` and add it to `docs/SUMMARY.md`. Don't change the space `key` in `gitbook-docs.yaml`: GitBook treats a new key as a new space.
 
 ## Notes
 

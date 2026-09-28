@@ -1,5 +1,5 @@
 ---
-description: Point DATUMx at the data you want answers grounded in.
+description: "Point DATUMx at the data you want answers grounded in."
 ---
 
 # Connecting data sources

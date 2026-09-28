@@ -1,5 +1,5 @@
 ---
-description: Three sizes, one API. Switch with a single parameter.
+description: "Three sizes, one API. Switch with a single parameter."
 ---
 
 # Models and context

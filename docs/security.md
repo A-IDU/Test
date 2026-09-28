@@ -1,5 +1,5 @@
 ---
-description: Private by default.
+description: "Private by default."
 ---
 
 # Security and privacy
